@@ -1,8 +1,10 @@
 import express, { Request, Response } from "express";
 import { port } from "./configs/envConfig";
 import { connectToDB } from "./configs/dbConfig";
+import appRoutes from "./routes/allRoutes"
 
 const app = express();
+app.use(appRoutes)
 connectToDB();
 
 
